@@ -1,0 +1,265 @@
+\documentclass[11pt, reqno]{amsart}
+\setlength{\columnsep}{20pt}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{amsthm}
+\usepackage{lscape}
+%\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{grffile}
+\usepackage{fancyhdr}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{empheq} 
+\usepackage{chngcntr}
+\usepackage{floatrow}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\numberwithin{figure}{section}
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries\scshape}}
+\makeatother
+
+   \renewcommand{\topfraction}{.8}
+   \renewcommand{\bottomfraction}{.8}
+   \renewcommand{\textfraction}{.2}
+
+
+\usepackage[style=numeric, maxnames=3,backend=bibtex, url=false, doi=false, isbn=false]{biblatex}
+\bibliography{Paper1ac}
+% Different font in captions
+\newcommand{\captionfonts}{\small}
+
+\newtheorem{thm}{Theorem}[subsection]
+\newtheorem{lemma}{Lemma}[subsection]
+\newtheorem{cor}{Corollary}[subsection]
+\newtheorem{define}{Definition}[subsection]
+\newtheorem{remark}{Remark}[subsection]
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1: #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother   % Cancel the effect of \makeatletter
+
+\setcounter{tocdepth}{2}
+\renewcommand{\contentsname}{}
+
+\counterwithout{figure}{section}
+\counterwithout{figure}{subsection}
+
+
+\numberwithin{equation}{section}
+
+\title{Rhythms Course}
+\author{Jon Cannon, Ben Polletta}
+%\date{}                                           % Activate to display a given date or no date
+
+
+
+\begin{document}
+\maketitle
+%\begin{multicols}{2}
+
+%\tableofcontents
+
+Content-goals:
+
+\begin{enumerate}
+\item Classical models of brain rhythms
+\item Basic experimental/analysis techniques for rhythms
+\end{enumerate}
+
+Skill-goals:
+
+\begin{enumerate}
+\item Read experimental rhythms papers
+\item Ask questions and hypothesize at the edge of the field
+\item Turn experimental results into psuedo-computational models
+\end{enumerate}
+
+Assignments:
+\begin{itemize}
+\item Day 1: Papers accompanied by comprehension worksheets
+\begin{itemize}
+\item Restate
+\item Interpret data/figures
+\end{itemize}
+\item Day 2: Synthesis assignment
+\begin{itemize}
+\item Extrapolate/hypothesize
+\item Pose questions
+\item Design model
+\end{itemize}
+\end{itemize}
+
+Tools:
+\begin{itemize}
+\item Qualitative analysis of vector fields in phase plane
+\end{itemize}
+
+
+By week:
+\begin{enumerate}
+
+\item Introductory week
+	\begin{itemize}
+	\item Syllabus
+	\item Review the neuron
+		\begin{itemize}
+		\item Neurons maintain electrical potential difference with environment
+		\item Different types of ions are conducted in and out through channels, affecting potential
+			\begin{itemize}
+			\item Terminology: INWARD vs. OUTWARD, Polarizing vs. Hyperpolarizing
+			\item Terminology: Conductance
+			\end{itemize}
+		\item Some ion channels open and close with voltage
+		\item Neurons interface at synapses
+			\begin{itemize}
+			\item Some open INWARD excitatory channels
+			\item Some open OUTWARD inhibitory channels.
+			\end{itemize}
+		\end{itemize}
+	\item Introduce 2D vector fields
+		\begin{itemize}
+		\item The spike: V vs. n
+		\item STATE determines DIRECTION
+		\end{itemize}
+	\item Introduce the frequency domain
+		\begin{itemize}
+		\item How to read a power spectrum
+			\begin{itemize}
+			\item What does a sine wave look like in the freq domain?
+			\item What does a sum of sine waves look like?
+			\item Look at other signal/spectrum pairs
+			\end{itemize}
+		\item How to read a spectrogram
+		\end{itemize}
+	\end{itemize}
+\item Gamma 1: What does the data say?
+	\begin{itemize}
+	\item Fast-spiking cells are critical.
+	\item Frequency is connected to inhibition time constant
+	\end{itemize}
+\item Gamma 2: What neural mechanism creates it?
+\item Gamma 3: What function might it serve?
+
+\textbf{PART 1: Cortico-thalamic rhythms}
+
+\item Alpha 1: What does the data say?
+\begin{itemize}
+\item 
+\end{itemize}
+\item Alpha 2:  What neural mechanisms create it?
+\begin{itemize}
+\item 
+\end{itemize}
+\item Beta 1: What does the data say?
+\begin{itemize}
+\item 
+\end{itemize}
+\item Beta 2: What neural mechanisms create it?
+\begin{itemize}
+\item 
+\end{itemize}
+
+\textbf{PART 2: Hippocampal rhythms}
+
+\item Theta 1: What does the data say?
+\begin{itemize}
+\item 
+\end{itemize}
+\item Theta 2: What neural mechanisms create it?
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item Ripples 1: What does the data say?
+\begin{itemize}
+\item 
+\end{itemize}
+\item Ripples 2: What neural mechanisms create it?
+\begin{itemize}
+\item 
+\end{itemize}
+
+\item Ripples/Theta: What functions are theta and ripples serving
+\begin{itemize}
+\item 
+\end{itemize}
+\item Projects 1
+\item Projects 2
+\item Projects 3
+\end{enumerate}
+
+
+OLD OUTLINE
+
+
+16 weeks
+
+1a. Introduction: what are rhythms?
+1b. Methods:
+
+Gamma
+Themes: Synchronous spiking, feedback inhibition
+1.  
+2.
+3.
+
+PART 1: Cortico-thalamic rhythms
+
+Alpha
+Themes: (Negative) attention, central control by thalamus, bursting
+Papers:
+Topics:
+4. 
+5.
+
+Beta
+Themes: Top-down control, laminar architecture
+6.
+7.
+
+Delta
+8.
+
+PART 2: Cortico-hippocampal rhythms
+
+Theta
+Themes: Nested rhythms, phase coding
+9.
+10.
+11.
+
+SWR
+Themes: Sequences, plasticity
+12.
+13.
+
+
+14-16 Projects
+
+
+\section{References}
+\printbibliography[heading=none]
+
+
+
+\end{document}
+
